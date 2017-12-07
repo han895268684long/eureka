@@ -51,6 +51,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * The class that kick starts the eureka server.
+ * 启动了“发现”服务器的类
  *
  * <p>
  * The eureka server is configured by using the configuration
@@ -110,7 +111,10 @@ public class EurekaBootStrap implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent event) {
         try {
+            // 读取配置信息
             initEurekaEnvironment();
+            // 初始化Eureka Client(用来与其它节点进行同步)
+            // 初始化server
             initEurekaServerContext();
 
             ServletContext sc = event.getServletContext();

@@ -13,6 +13,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * eureka 服务端注册表实例类
+ *
  * @author Tomasz Bak
  */
 public interface InstanceRegistry extends LeaseManager<InstanceInfo>, LookupService<String> {

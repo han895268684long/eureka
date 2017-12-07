@@ -50,3 +50,13 @@ Please see [wiki](https://github.com/Netflix/eureka/wiki) for detailed documenta
     4. com.netflix.eureka.resources - RESTful风格中的”R”, 即资源。相当于SpringMVC中的Controller 
     5. com.netflix.eureka.transport - 发送HTTP请求的客户端，如发送心跳 
     6. com.netflix.eureka.aws - 与amazon AWS服务相关的类
+    
+  eureka-client模块: 
+  --------------   
+    Eureka客户端，微服务通过该客户端与Eureka进行通讯，屏蔽了通讯细节
+    
+  eureka-server模块: 
+  --------------   
+    包含了 servlet 应用的基本配置，如 web.xml。构建成功后在该模块下会生成可部署的war包。
+   其他
+   -----
