@@ -31,3 +31,22 @@ Support
 Documentation
 --------------
 Please see [wiki](https://github.com/Netflix/eureka/wiki) for detailed documentation.
+
+同步原作者的代码
+--------------
+    进入刚才clone的文件目录下，然后增加源分支地址到你项目远程分支列表中，命令是
+    git remote add Netflix https://github.com/Netflix/eureka.git
+    fetch源分支到本地，命令是：
+    git fetch Netflix
+    合并两个版本的代码
+    git merge Netflix/master
+    最后一步，把合并后的代码push到你的Github项目上去，这步需要你输入你的账户名和密码
+    git push origin master
+ eureka-core 模块包含了功能的核心实现: 
+ --------------     
+    1. com.netflix.eureka.cluster - 与peer节点复制(replication)相关的功能 
+    2. com.netflix.eureka.lease - 即”租约”, 用来控制注册信息的生命周期(添加、清除、续约) 
+    3. com.netflix.eureka.registry - 存储、查询服务注册信息 
+    4. com.netflix.eureka.resources - RESTful风格中的”R”, 即资源。相当于SpringMVC中的Controller 
+    5. com.netflix.eureka.transport - 发送HTTP请求的客户端，如发送心跳 
+    6. com.netflix.eureka.aws - 与amazon AWS服务相关的类
